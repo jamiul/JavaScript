@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+ <title>JavaScripts</title>
+ <style>
+  body{font-family:verdana}.phpcoding{width:900px; margin: 0 auto;background:#f1f1f1}.headeroption, .footeroption{background:#2B81D7;color:#fff;text-align:center;padding:20px;}.headeroption h2, .footeroption h2{margin:0}.maincontent{min-height:400px;padding:20px;}
+  button {
+	padding: 2px 10px;
+	cursor: pointer;
+	font-size: 20px;
+	margin-bottom: 10px;
+  }
+ </style>
+</head>
+<body>
+
+<div class="phpcoding">
+ <section class="headeroption">
+  <h2>JavaScript Fundamental</h2>
+ </section> 
+<section class="maincontent">
+<h1>Custom FadeIn FadeOut</h1>
+<div>
+	<button onclick="fadeOut()">Start</button>
+	<img src="convocation.jpg" id="myimage" width="100%" height="100%"/>
+</div>
+<script type="text/javaScript">
+	var element = document.getElementById("myimage");
+	var hidtime = 1000;
+	var showtime = 1000;
+	var duration = 1000;
+	
+	function setOpacity(value) {
+		element.style.opacity = value;
+	
+	}
+	
+	function fadeOut() {
+		for(i=0; i<=1; i+=0.01){
+			setTimeout("setOpacity("+(1-i)+")", i*duration);
+		}
+		setTimeout("fadeIn()",(hidtime+duration));
+	
+	}
+	
+	function fadeIn() {
+		for(i=0; i<=1; i+=0.01){
+			setTimeout("setOpacity("+i+")", i*duration);
+		}
+		
+		setTimeout("fadeOut()",(showtime+duration));
+	
+	}
+	
+		
+</script>
+   
+</section>
+ <section class="footeroption">
+  <h2>Xsellence Bangladesh Ltd.</h2>
+ </section>
+</div>
+</body>
+</html>

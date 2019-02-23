@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+ <title>JavaScripts</title>
+ <style>
+  body{font-family:verdana}.phpcoding{width:900px; margin: 0 auto;background:#f1f1f1}.headeroption, .footeroption{background:#2B81D7;color:#fff;text-align:center;padding:20px;}.headeroption h2, .footeroption h2{margin:0}.maincontent{min-height:400px;padding:20px;}
+ </style>
+</head>
+<body>
+
+<div class="phpcoding">
+ <section class="headeroption">
+  <h2>JavaScript Fundamental</h2>
+ </section> 
+<section class="maincontent">
+<h1>JavaScripts Objects</h1>
+
+
+<script>
+var person = {
+	firstName : 'Jamiul',
+	lastName : 'Alam',
+	age       : '30',
+	PassYear  : '2018',
+	eyeColor  : 'Brown',
+	fullName  : function(){
+		return this.firstName+" "+this.lastName;
+	}
+};
+
+document.write(person.fullName()+" is "+person.age+" years old.</br> "
++person['lastName']+"'s Passing Year : "+person['PassYear']+"</br> Eye Color: "+person.eyeColor);
+</script>
+   
+</section>
+ <section class="footeroption">
+  <h2>Xsellence Bangladesh Ltd.</h2>
+ </section>
+</div>
+</body>
+</html>
